@@ -3,7 +3,7 @@ import React from 'react';
 class Fahrenheit extends React.Component{
 
     handleOnChangeFahrenheit = (e) =>{
-        this.props.handleOnChange(e.target.value);
+        this.props.handleOnChange(e.target.value, "Fahrenheit");
 
     }
 
@@ -12,9 +12,10 @@ class Fahrenheit extends React.Component{
 
         return(
 
-        <>
-            <input class="input-field" style={{fontSize: "20px"}} type="number" placeholder='Fahrenheit' value={this.props.value} onChange={this.handleOnChangeFahrenheit}/>
-        </>
+        <div className="temperature-input-box">
+            <span  style={{fontSize: "20px"}}> <b>Fahrenheit</b></span>
+            <input className="input-field" style={{fontSize: "20px"}} type="number" placeholder='Fahrenheit' value={this.props.value} onChange={this.handleOnChangeFahrenheit}/>
+        </div>
         );
         
     }

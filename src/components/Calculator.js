@@ -1,6 +1,7 @@
 import React  from "react";
 import Celcius from "./Celcius";
 import Fahrenheit from "./Fahrenheit";
+import Kelvin from "./Kelvin";
 import '../App.css';
 
 class Calculator extends React.Component{
@@ -11,11 +12,13 @@ class Calculator extends React.Component{
         this.scale = {
             c: "Celcius",
             f: "Fahrenheit",
+            k: "Kelvin",
         };
 
         this.state = {
             celcius: "",
-            fahrenheit: ""
+            fahrenheit: "",
+            kelvin: "",
         };
 
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -23,21 +26,42 @@ class Calculator extends React.Component{
 
     handleOnChange(value, scale) {
 
-        scale === this.scale.c ? this.setState(
-            {celcius: value,
-            fahrenheit: this.toFahrenheit(value)}
-        ) : this.setState(
-            {celcius: this.toCelcius(value),
-            fahrenheit: value}
-        ) ;
-        
-    }
+        switch (scale){
+            case this.scale.c :
+                this.setState({
+                    celcius: value,
+                    fahrenheit: this.toFahrenheit(value, scale),
+                    kelvin: this.toKelvin(value, scale),
+                })
+                break;
+            
+            case this.scale.k :
+                this.setState({
+                    celcius: this.toCelcius(value, scale),
+                    kelvin: value,
+                    fahrenheit: this.toFahrenheit(value, scale)
+                })
+                break;
 
-    toCelcius = (fahrenheit) =>{
+            case this.scale.f :
+                this.setState({
+                    celcius: this.toCelcius(value, scale),
+                    kelvin: this.toKelvin(value, scale),
+                    fahrenheit: value
+                })
+                break;
+
+            default:
+                alert("Something goes wrong.", scale);
+        }
+        
+     }
+
+
+    toCelcius = (value, scale) =>{
         //° C = 5/9 (° F - 32)
-        if (fahrenheit !== ""){
-            const celciusValue = (5/9 * (fahrenheit - 32)).toFixed(2);
-            return celciusValue;
+        if (value != ""){
+            return scale === this.scale.f ? parseFloat(5/9 * (value - 32)).toFixed(2) : parseFloat(value - 273.15).toFixed(2) ;
         }
         else{
             return "";
@@ -45,29 +69,46 @@ class Calculator extends React.Component{
         
     }
 
-    toFahrenheit = (celcius) =>{
+    toFahrenheit = (value, scale) =>{
         //° F = 9/5 ( ° C) + 32
-        if (celcius !== ""){
-            const fahrenheitValue = ((9/5)*celcius + 32).toFixed(2);
-            return fahrenheitValue;
+        if (value != ""){
+            return scale === this.scale.c ? parseFloat((9/5)*value + 32).toFixed(2) : parseFloat((9/5)*(value-273.15) + 32).toFixed(2);
+         }
+        else{
+            return "";
+        }
+
+        
+    }
+
+    toKelvin = (value, scale) =>{
+        if (value != ""){
+            return scale === this.scale.c ? parseFloat(Number(value) + 273.15).toFixed(2) : parseFloat((5/9)*value + 459.67).toFixed(2);
         }
         else{
             return "";
         }
-        
+
     }
 
     render(){
 
         return(
             <>
-                <div className="center-screen align-card">
-                    <h1>Temprature Converter</h1>
+                <div className="calculator-card">
+                    <p><b>All units are in sync. Enter temperature in any
+                        unit and get it's equivalent in other two units.</b>
+                    </p>
                     <Celcius value={this.state.celcius} handleOnChange={this.handleOnChange}/>
                         <br/>
-                    <span style={{fontSize: "30px"}}>⇅</span>
+                    <span className="arrow-icon">⇅</span>
+                        <br/>
+                    <Kelvin value={this.state.kelvin} handleOnChange={this.handleOnChange}/>
+                        <br/>
+                    <span className="arrow-icon">⇅</span>
                         <br/>
                     <Fahrenheit value={this.state.fahrenheit} handleOnChange={this.handleOnChange}/>
+
                 </div>
             </>
         );

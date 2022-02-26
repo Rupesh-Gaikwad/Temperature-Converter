@@ -37,27 +37,70 @@
   }
 }
 
-.center-screen{
-  
+h1{
+  color: #a11735;
+  text-align: center;
+  width: fit-content;
+  margin: 2% auto;
+}
+
+p{
+  text-align: center;
+  width: 25rem;
+  background-color: #8ea7da;
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+}
+
+
+.calculator-card{
+  background-color: #d9eee1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100%;
-  border: 1px solid black;
-  width: 60%;
-  margin: 10% auto;
+  min-height: 60vh;
+  border: .1px solid rgb(192, 192, 192);
+  border-radius: 1rem;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem 1rem 2rem 1rem;
+  box-shadow: 5px 10px 18px rgb(142, 190, 142);
 }
 
-.align-card{
-  padding: 20px 10px;
+input{
+  width: 15rem;
+  height: 2rem;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+}
+
+.temperature-input-box{
   display: flex;
   flex-direction: column;
-  vertical-align: middle;
+  row-gap: 1rem;
+  
 }
 
+.arrow-icon{
+  font-size: 1.2rem;
+}
 
-.input-field{
-  width: 60%;
-  margin: auto;
+@media (max-width: 800px){
+  .calculator-card{
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  h1{
+    margin-top: 10%;
+    margin-bottom: 2rem;
+  }
+
+  p{
+    width: 80%;
+  }
 }
