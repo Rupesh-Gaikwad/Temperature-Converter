@@ -13,7 +13,7 @@ class Fahrenheit extends React.Component{
         return(
 
         <div className="temperature-input-box">
-            <span  style={{fontSize: "20px"}}> <b>Fahrenheit</b></span>
+            <span  style={{fontSize: "20px", color: "black"}}> <b>Fahrenheit</b></span>
             <input className="input-field" style={{fontSize: "20px"}} type="number" value={this.props.value} onChange={this.handleOnChangeFahrenheit}/>
         </div>
         );

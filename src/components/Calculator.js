@@ -25,6 +25,10 @@ class Calculator extends React.Component{
     }
 
     handleOnChange(value, scale) {
+        console.log(value, typeof value);
+        if (value.toString().includes("-")){
+            alert("1 found");
+        }
 
         switch (scale){
             case this.scale.c :
@@ -60,7 +64,7 @@ class Calculator extends React.Component{
 
     toCelcius = (value, scale) =>{
         //° C = 5/9 (° F - 32)
-        if (value != ""){
+        if (value !== ""){
             return scale === this.scale.f ? parseFloat(5/9 * (value - 32)).toFixed(2) : parseFloat(value - 273.15).toFixed(2) ;
         }
         else{
@@ -71,7 +75,7 @@ class Calculator extends React.Component{
 
     toFahrenheit = (value, scale) =>{
         //° F = 9/5 ( ° C) + 32
-        if (value != ""){
+        if (value !== ""){
             return scale === this.scale.c ? parseFloat((9/5)*value + 32).toFixed(2) : parseFloat((9/5)*(value-273.15) + 32).toFixed(2);
          }
         else{
@@ -82,7 +86,7 @@ class Calculator extends React.Component{
     }
 
     toKelvin = (value, scale) =>{
-        if (value != ""){
+        if (value !== ""){
             return scale === this.scale.c ? parseFloat(Number(value) + 273.15).toFixed(2) : parseFloat((5/9)*value + 459.67).toFixed(2);
         }
         else{
@@ -96,8 +100,8 @@ class Calculator extends React.Component{
         return(
             <>
                 <div className="calculator-card">
-                    <p id="instructions"><b>All units are in sync. Enter temperature in any
-                        unit and get it's equivalent in other two units.</b>
+                    <p id="instructions"><b>Enter temperature in any
+                        unit and get it's equivalent in other units.</b>
                     </p>
                     <div className="unit-input-unit">
                         <Celcius value={this.state.celcius} handleOnChange={this.handleOnChange}/>
@@ -119,6 +123,7 @@ class Calculator extends React.Component{
                     </div>
 
                 </div>
+                <p style={{padding: "1rem 0rem"}}> Made with ♥ by Rupesh Gaikwad</p>
             </>
         );
     }
