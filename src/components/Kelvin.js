@@ -14,7 +14,7 @@ class Kelvin extends React.Component{
 
         <div className="temperature-input-box">
             <span  style={{fontSize: "20px"}}> <b>Kelvin</b></span>
-            <input className="input-field" style={{fontSize: "20px"}} type="number" placeholder='Kelvin' value={this.props.value} onChange={this.handleOnChangeKelvin}/>
+            <input className="input-field" style={{fontSize: "20px"}} type="number" value={this.props.value} onChange={this.handleOnChangeKelvin}/>
         </div>
         );
         

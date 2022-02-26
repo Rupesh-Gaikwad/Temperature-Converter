@@ -12,7 +12,7 @@ class Celcius extends React.Component{
         return (
         <div className="temperature-input-box">
             <span  style={{fontSize: "20px"}}> <b>Celcius</b></span>
-            <input className="input-field"  style={{fontSize: "20px"}} type="number" placeholder="Celcius" value={this.props.value} onChange={this.handleOnChangeCelcius}/>
+            <input className="input-field"  style={{fontSize: "20px"}} type="number" value={this.props.value} onChange={this.handleOnChangeCelcius}/>
             
         </div>
         );

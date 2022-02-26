@@ -96,18 +96,27 @@ class Calculator extends React.Component{
         return(
             <>
                 <div className="calculator-card">
-                    <p><b>All units are in sync. Enter temperature in any
+                    <p id="instructions"><b>All units are in sync. Enter temperature in any
                         unit and get it's equivalent in other two units.</b>
                     </p>
-                    <Celcius value={this.state.celcius} handleOnChange={this.handleOnChange}/>
+                    <div className="unit-input-unit">
+                        <Celcius value={this.state.celcius} handleOnChange={this.handleOnChange}/>
+                        <p className="unit"><sup>o</sup>C</p>
+                    </div>
                         <br/>
                     <span className="arrow-icon">⇅</span>
                         <br/>
-                    <Kelvin value={this.state.kelvin} handleOnChange={this.handleOnChange}/>
+                    <div className="unit-input-unit">
+                        <Kelvin value={this.state.kelvin} handleOnChange={this.handleOnChange}/>
+                        <p className="unit">K</p>
+                    </div>
                         <br/>
                     <span className="arrow-icon">⇅</span>
                         <br/>
-                    <Fahrenheit value={this.state.fahrenheit} handleOnChange={this.handleOnChange}/>
+                    <div className="unit-input-unit">
+                        <Fahrenheit value={this.state.fahrenheit} handleOnChange={this.handleOnChange}/>
+                        <p className="unit"><sup>o</sup>F</p>
+                    </div>
 
                 </div>
             </>
