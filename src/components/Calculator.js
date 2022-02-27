@@ -87,7 +87,7 @@ class Calculator extends React.Component{
 
     toKelvin = (value, scale) =>{
         if (value !== ""){
-            return scale === this.scale.c ? parseFloat(Number(value) + 273.15).toFixed(2) : parseFloat((5/9)*value + 459.67).toFixed(2);
+            return scale === this.scale.c ? parseFloat(Number(value) + 273.15).toFixed(2) : parseFloat((5/9)*(Number(value) + 459.67)).toFixed(2);
         }
         else{
             return "";
