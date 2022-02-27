@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Temperature Convertor
 
-## Available Scripts
+This is simple temperature converter application made with React.js.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About The Project
 
-### `npm test`
+This is very basic application built with React.js. You can use 
+this application to get equivalent temperature values by
+enetering temperature in any of the available unit. 
+## About Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this project I used class based components. Also used Props and States to pass values
+from one component to another and to keep track of latest entered values respectively.
+# Getting Started
 
-### `npm run build`
+Now follow me in this section to run this application on your local computer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install node.js to your computer( download appropriate installer for your OS)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    https://nodejs.org/en/download/
 
-### `npm run eject`
+Install latest npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    npm install npm@latest -g
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install React.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    npm install reactjs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Steps to install and run :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Clone the repository on your computer
 
-### Code Splitting
+        https://github.com/Rupesh-Gaikwad/Temperature-Converter.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Go to "/Temperature-Converter" folder in your terminal
 
-### Analyzing the Bundle Size
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Execute below command 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        npm run start
 
-### Making a Progressive Web App
+OR 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+        npm start
 
-### Advanced Configuration
+Now, temperature converter application will open in your default browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Hey! congrats for successfully executing this application on your computer.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Usage
 
-### `npm run build` fails to minify
+You can use this application to convert temperature value from one unit to another.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. Don't forget to give the project a star! Thanks again!
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Fork the Project
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Push to the Branch (git push origin feature/AmazingFeature)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Open a Pull Request
+
+# Contact
+
+Name - Rupesh Gaikwad
+
+Email - rupeshgaikwad3333@gmail.com
+
+Project Link - 
+
+    https://github.com/Rupesh-Gaikwad/Temperature-Converter
