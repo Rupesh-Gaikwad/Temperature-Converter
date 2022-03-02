@@ -3,8 +3,7 @@
 
 This is simple temperature converter application made with React.js.
 
-![Temperature-Converter](https://user-images.githubusercontent.com/90320333/155887859-623706df-011a-443a-aec7-7e5b05cd6f0b.png)
-
+![temperature-convertor app](https://user-images.githubusercontent.com/90320333/156386104-0fe94ee6-edd5-41db-b542-817a4f147cde.png)
 
 
 ## About The Project
