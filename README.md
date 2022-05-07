@@ -46,6 +46,8 @@ Steps to install and run :
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Execute below command 
 
+        npm install
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then,
         npm run start
 
 OR 
