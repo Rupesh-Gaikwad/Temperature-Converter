@@ -48,6 +48,7 @@ Steps to install and run :
 
         npm install
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then,
+
         npm run start
 
 OR 
